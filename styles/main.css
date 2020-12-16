@@ -3,3 +3,127 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #000;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* HEADER and NAVIGATION */
+header, nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;       
+}
+
+header{
+    width: 90%;
+    margin: 1.5rem auto 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.logo a, .logo i{
+    font-size: 2.5rem;        
+    font-weight: bold;
+}
+
+nav li{
+    margin-left: 2rem;
+    list-style: none;
+    font-size: 1.5rem;    
+}
+
+.logo a, nav a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* USER NAME Section */
+
+.user-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+    margin: 10rem auto 0 ;        
+}
+
+.user-name p{
+    font-size: 2rem;
+    letter-spacing: 1px;        
+}
+
+/* Name Input Container */
+
+.name-container{
+    position: relative;
+    width: 40%;
+    height: 3rem;
+    margin-top: 2.5rem;
+    overflow: hidden;
+}
+
+.name-container input{
+    font-family: 'Space Grotesk', sans-serif;        
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;        
+    padding-top: -25px;
+    font-size: 2rem;    
+    text-align: center;
+}
+
+.name-container label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #000;
+    pointer-events: none;
+}
+
+.name-container label::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: -1px;
+    border-bottom: 3px solid #5fa8d3;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in;
+}
+
+.name-container input:focus+.name-label::after,
+.name-container input:valid+.name-label::after{
+    transform: translateX(0);
+}
+
+/* Submit Button */
+.nameBtn{    
+    width: 20%;
+    font-size: 2rem;    
+    outline: none;
+    margin-top: 3.5rem;   
+    padding: .5rem 3rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+    background: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-weight: 600;
+}
+
+.nameBtn:hover{
+    background-color: #5fa8d3;
+    border: 1px solid #5fa8d3;
+    color: #fff;
+}
+
