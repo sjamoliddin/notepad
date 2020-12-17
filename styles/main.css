@@ -33,12 +33,17 @@ header{
 nav li{
     margin-left: 2rem;
     list-style: none;
-    font-size: 1.5rem;    
+    font-size: 1.5rem;      
 }
 
 .logo a, nav a{
     text-decoration: none;
     color: #000;
+    transition: color .3s ease;  
+}
+
+nav a:hover, .intro-content a:hover{
+    color: #5fa8d3;
 }
 
 /* USER NAME Section */
@@ -48,7 +53,8 @@ nav li{
     justify-content: center;
     align-items: center;
     flex-direction: column;   
-    margin: 10rem auto 0 ;        
+    margin: 10rem auto 0 ;    
+    transition: all .01s ease;    
 }
 
 .user-name p{
@@ -117,8 +123,7 @@ nav li{
     background: transparent;
     border: 1px solid #000;
     cursor: pointer;
-    transition: all .3s ease;
-    font-weight: 600;
+    transition: all .3s ease;    
 }
 
 .nameBtn:hover{
@@ -127,3 +132,28 @@ nav li{
     color: #fff;
 }
 
+/* Intro Container */
+.intro-container{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    margin: 10rem auto 0 ;
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.intro-content{
+    font-size: 2rem;
+    opacity: .6;
+    text-align: center;
+    line-height: 5rem;
+}
+
+.intro-content a{
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+    color: #000;
+    transition: color .3s ease;   
+}
