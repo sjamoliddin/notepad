@@ -40,11 +40,15 @@
         <form class="write-form">
             <section class="form-group">
                 <!-- <label for="title">Title</label> -->
-                <input type="text" name="title" required autocomplete="off" class="form-input" placeholder="title">
+                <input type="text" name="title" required autocomplete="off" class="form-input post-title"
+                    placeholder="title">
                 <!-- <label for="postContent">Post</label> -->
-                <textarea name="postContent" id="" cols="30" rows="5" class="form-input" required placeholder="post"></textarea>
-                <div class="checkbox"><input type="checkbox" required> <span>please note that once you publish your post, it is not possible
-                    to delete it.</span></div>
+                <textarea name="postContent" id="" cols="30" rows="5" class="form-input post" required
+                    placeholder="post"></textarea>
+                <div class="checkbox">
+                    <input type="checkbox" required>
+                    <span>please note that once you publish your post, it is not possible to delete it.</span>
+                </div>
             </section>
 
             <button type="submit" class="publish-btn">publish</button>

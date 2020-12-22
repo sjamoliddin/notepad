@@ -3,7 +3,7 @@ const form = document.querySelector('.user-name');
 const introContainer = document.querySelector('.intro-container');
 
 // Event Listeners
-document.addEventListener('DOMContentLoaded', checkStorage);
+document.addEventListener('DOMContentLoaded', checkName);
 document.querySelector('.nameBtn').addEventListener('click', changeName);
 
 // Functions 
@@ -15,7 +15,7 @@ function changeName(e) {
     if (!(name === "")) {
         document.querySelector('.logo a').textContent = `${name}`;
         // removing the whole form section            
-        form.remove();        
+        form.remove();
         introContainer.style.opacity = '1';
         // storing user's name to the storage
         localStorage.setItem('userName', JSON.stringify(name));
@@ -24,11 +24,11 @@ function changeName(e) {
     }
 }
 
-function checkStorage() {
+function checkName() {
     let name = localStorage.getItem('userName');
-    if (name) {                
-        document.querySelector('.logo a').textContent = `${name.split('"')[1]}`;        
-        form.remove();        
+    if (name || document.title === 'notepad') {
+        document.querySelector('.logo a').textContent = `${name.split('"')[1]}`;
+        form.remove();
         introContainer.style.opacity = '1';
     }
 }
