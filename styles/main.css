@@ -175,6 +175,11 @@ nav a:hover, .intro-content a:hover, .logo a:hover, .main-content a:hover{
     margin: 0 auto 2rem;
     border-bottom: 1px solid #e2dbda;
     padding-bottom: 1rem;
+    transition: all .4s ease;
+}
+
+.fall{
+    opacity: 0;
 }
 
 .title-container{
