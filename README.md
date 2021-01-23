@@ -1,4 +1,7 @@
 # notepad
 a web notepad where it is possible to write anything
 
-responsive: false
+
+### features:
+- write, save or delete posts
+- saved posts are stored to local storage
